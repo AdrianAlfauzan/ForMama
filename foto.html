@@ -27,22 +27,6 @@
         .animate-slideDown {
             animation: slideDown 1s ease-out;
         }
-
-        /* Animasi scroll otomatis */
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .animate-scroll {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
     </style>
 </head>
 
@@ -63,27 +47,29 @@
         <span>M</span>
         <span>A</span>
         <span>❤️❤️❤️</span>
-
-    </div>
-    <div class="description">
-        <span>I have a special gift for you...</span>
     </div>
 
     <div
-        class="w-[350px] text-black p-6 bg-red-100 bg-opacity-1 border-4 border-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-xl shadow-xl animate__animated animate__backInDown relative">
-        <!-- Ikon kado di pojok kanan atas -->
-        <i class="fas fa-gift absolute top-0 right-0 text-3xl text-pink-500"></i>
-
-        Happy birthday, Mama! 🎉✨
-        Semoga panjang umur dan sehat selalu 😍
-        Hari ini adalah hari spesial untuk wanita paling luar biasa dalam hidupku. Terima kasih sudah jadi pelindung,
-        penyemangat, dan sumber cinta yang tak pernah habis. Semoga kebahagiaan selalu mengelilingi Mama, seperti Mama
-        selalu mengelilingi kami dengan cinta. Love you to the moon and back! 💖🌙
+        class="w-full text-black bg-red-100 bg-opacity-1 border-4 border-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-xl shadow-xl animate__animated animate__backInDown relative">
+        <h1>Geser saja >>></h1>
+        <div class="overflow-x-auto max-w-full  py-8 ">
+            <div class="flex flex-row gap-4 ">
+                <img src="img/foto1.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+                <img src="img/foto2.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+                <img src="img/foto3.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+                <img src="img/foto4.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+                <img src="img/foto5.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+                <img src="img/foto6.jpg" alt="Your Image" class="max-w-[600px] h-[450px] rounded-lg mx-auto" />
+            </div>
+        </div>
     </div>
-    <div class="button">
+    <div>
         <button type="button"
-            class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 "><a
-                href="foto.html">Klik Lebih Lanjut</a></button>
+            class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+            <a href="index.html">Sebelumnya</a></button>
+        <button type="button"
+            class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+            <a href="flower.html">Selanjutnya</a></button>
     </div>
 
     <div style="width: auto; display: flex; justify-content: center;">

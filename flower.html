@@ -9,75 +9,46 @@
   <link rel="icon" href="img/flowers.png" type="image/x-icon">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <title>flowers</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    /* Responsiveness for smaller screens */
-    @media (max-width: 768px) {
-      #popup {
-        width: 90%;
-        max-height: 80%;
-        overflow-y: auto;
-      }
+    .birthday-text {
+      font-family: 'Pacifico', cursive;
+      color: #ffffff;
+    }
 
-      #popup img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
+    .button-style {
+      background: linear-gradient(to right, #f7a1a1, #ff8f8f);
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      padding: 12px 25px;
     }
   </style>
 </head>
 
 <body class="container">
+  <div class="mb-20 flex text-white" style="opacity: 0.8; position: fixed; top: 0; left: 0; right: 0; z-index: 50;">
+    <div class="p-4 font-sans">
+      <h1 class="text-2xl md:text-3xl text-center birthday-text">- 2025</h1>
+      <h1 class="text-3xl text-white my-4 birthday-text">Hello Mama❤️</h1>
+      <p class="text-lg my-2 text-white">Thank you for everything you've done for me.</p>
+      <p class="text-lg my-2 text-white">You are my hero, my biggest inspiration, and my safe haven.</p>
+      <p class="text-lg my-2 text-white">I’m sorry for all my mistakes & thank you for your endless love.</p>
+      <br>
+      <button type="button"
+        class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 button-style">
+        <a href="index.html">Kembali</a>
+      </button>
+    </div>
+    <br>
+    <!-- <div style="width: auto; display: flex; justify-content: flex-start;">
+      <audio controls autoplay loop>
+        <source src="music/Somebody's pleasure.mp3" type="audio/mpeg">
+      </audio>
+    </div> -->
+  </div>
   <div class="night"></div>
   <div class="flowers">
-    <div class="flower-words">
-      <div class="text-center p-4 font-sans">
-        <h1 class="text-2xl md:text-3xl">- 2025</h1>
-        <h1 class="text-3xl text-red-500 my-4">Hello Mama❤️</h1>
-        <p class="text-lg my-2">Thank you for everything you've done for me.</p>
-        <p class="text-lg my-2">You are my hero, my biggest inspiration, and my safe haven.</p>
-        <p class="text-lg my-2">I’m sorry for all my mistakes & thank you for your endless love.</p>
-        <br>
-        <p class="text-base my-4">Tekan tombol lagi untuk lebih details</p>
-      </div>
-
-      <div class="flex justify-center gap-4 w-full">
-        <button type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          onclick="showPopup()">Klik Lagi!</button>
-      </div>
-
-      <!-- Popup container -->
-      <div id="popup"
-        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); text-align: center; z-index: 1000; width: 90%; max-width: 500px; overflow-y: auto; max-height: 90%;">
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-          <img src="img/foto1.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-          <img src="img/foto2.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-          <img src="img/foto3.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-          <img src="img/foto4.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-          <img src="img/foto5.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-          <img src="img/foto6.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        </div>
-        <button
-          style="margin-top: 20px; background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer;"
-          onclick="closePopup()">
-          Close
-        </button>
-      </div>
-
-      <!-- Overlay background -->
-      <div id="overlay"
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;">
-      </div>
-
-      <div style="width: auto; display: flex; justify-content: center;">
-        <audio controls autoplay loop>
-          <source src="music/Somebody's pleasure.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-    </div>
-
     <div class="flower flower--1">
       <div class="flower__leafs flower__leafs--1">
         <div class="flower__leaf flower__leaf--1"></div>
@@ -375,17 +346,7 @@
   </div>
   <script src="main.js"></script>
   <script src="typing.js"></script>
-  <script>
-    function showPopup() {
-      document.getElementById("popup").style.display = "block";
-      document.getElementById("overlay").style.display = "block";
-    }
 
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-  </script>
 </body>
 
 </html>

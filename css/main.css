@@ -10,43 +10,6 @@
   --dark-color: #000;
 }
 
-/* CSS untuk elemen kata-kata di atas bunga */
-
-.flower-words {
-  position: relative;
-  left: -60px;
-  top: -220px;
-  z-index: 999999; /* Atur nilai z-index yang sesuai */
-  color: white;
-}
-
-.flower-words h1,
-.flower-words p {
-  overflow: hidden;
-  font-size: 24px;
-  white-space: nowrap;
-  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-right: 3px solid transparent;
-  }
-  50% {
-    border-right: 3px solid #000;
-  }
-}
-
 body {
   display: flex;
   align-items: flex-end;
@@ -73,14 +36,13 @@ body {
 .flowers {
   position: relative;
   transform: scale(0.9);
-  left: 150px;
 }
 
 .flower {
   position: absolute;
   bottom: 10vmin;
   transform-origin: bottom center;
-  margin-left: 200px;
+  margin-left: 50px;
   z-index: 10;
   --fl-speed: 0.8s;
 }
