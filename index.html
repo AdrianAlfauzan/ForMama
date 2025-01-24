@@ -40,37 +40,39 @@
             }
         }
 
-        /* Optional: Add some padding for better visuals */
         body {
             padding: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            max-width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 150px;
+            /* adjust the size of the images */
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
+        <span style="text-shadow: 0 0 5px red; color: pink;">I LOVE YOU </span>
         <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
+        <span style="text-shadow: 0 0 5px red; color: pink;">I LOVE YOU </span>
         <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
-        <span><img src="img/heart.png" width="50" alt=""></span>
-        <span style="text-shadow:  0 0 5px red; color: pink;">I LOVE YOU </span>
+        <!-- Repeat the I LOVE YOU spans -->
     </div>
     <div class="greetings">
-        <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
         <span>F</span>
         <span>O</span>
         <span>R</span>
@@ -78,10 +80,6 @@
         <span>A</span>
         <span>M</span>
         <span>A</span>
-        <!-- <span>B</span>
-        <span>A</span>
-        <span>B</span>
-        <span>Y</span> -->
     </div>
     <div class="description">
         <span>I have a special gift for you...</span>
@@ -91,11 +89,7 @@
             <a href="flower.html">Click Here</a>
         </button>
     </div>
-    <div style="width: auto; display: flex; justify-content: center;">
-        <audio controls autoplay loop>
-            <source src="music/Somebody's pleasure.mp3" type="audio/mpeg">
-        </audio>
-    </div>
+
     <div class="typing-text">
         Happy birthday, Mama! 🎉✨
         Semoga panjang umur dan sehat selalu 😍
@@ -103,13 +97,22 @@
         penyemangat, dan sumber cinta yang tak pernah habis. Semoga kebahagiaan selalu mengelilingi Mama, seperti Mama
         selalu mengelilingi kami dengan cinta. Love you to the moon and back! 💖🌙
     </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-        <img src="img/foto1.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <img src="img/foto2.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <img src="img/foto3.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <img src="img/foto4.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <img src="img/foto5.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
-        <img src="img/foto6.jpg" alt="Your Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
+    <!-- Container for scrollable images -->
+    <div class="overflow-y-auto max-h-[500px] py-4">
+        <div class="flex flex-col gap-4">
+            <img src="img/foto1.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+            <img src="img/foto2.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+            <img src="img/foto3.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+            <img src="img/foto4.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+            <img src="img/foto5.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+            <img src="img/foto6.jpg" alt="Your Image" class="max-w-[200px] h-auto rounded-lg mx-auto" />
+        </div>
+    </div>
+
+    <div style="width: auto; display: flex; justify-content: center;">
+        <audio controls autoplay loop>
+            <source src="music/Somebody's pleasure.mp3" type="audio/mpeg">
+        </audio>
     </div>
 </body>
 
